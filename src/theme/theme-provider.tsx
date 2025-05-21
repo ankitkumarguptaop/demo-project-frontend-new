@@ -11,13 +11,13 @@ export default function ThemeProviderWrapper({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    // <AppRouterCacheProvider options={{ key: "css", prepend: true, enableCssLayer: true }} >
-      <StyledEngineProvider injectFirst >
+    <AppRouterCacheProvider>
+      <StyledEngineProvider  >
         <ThemeProvider theme={theme}>
           <CssBaseline />
           {children}
         </ThemeProvider>
       </StyledEngineProvider>
-    // </AppRouterCacheProvider>
+     </AppRouterCacheProvider>
   );
 }
